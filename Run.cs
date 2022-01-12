@@ -29,7 +29,18 @@ namespace Identify
                         }
                     case 2:
                         {
-
+                            foreach (var pers in ListePersonne)
+                            {
+                                pers.Afficher();
+                            }
+                            foreach(var pers in ListePersonne)
+                            {
+                                int modifyIndex = Message.AskForIndexMod();
+                                if (modifyIndex==pers.id)
+                                {
+                                    pers.Modify(); ;
+                                }
+                            }
                             break;
                         }
                     case 3:

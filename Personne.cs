@@ -12,7 +12,7 @@ namespace Identify
         string name;
         string lastName;
         int age;
-        int id;
+       public int id;
         public Personne(string name,string lastName,int age)
         {
             this.name = name;
@@ -31,11 +31,28 @@ namespace Identify
         }
         public void Modify()
         {
+            Message.ModifyMenu();
             int mod = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Que voulez-vous modifier sur cette personne");
-            if (mod==1)
+            switch(mod)
             {
-               
+                case 1:
+                    {
+                        Console.WriteLine("Le nom est :"+ name);
+                        name=Message.AskForNewName();
+                        break;
+                    }
+                case 2:
+                    {
+                        Console.WriteLine("Le nom de famille est :" + lastName);
+                        lastName = Message.AskForNewLastName();
+                        break;
+                    }
+                case 3:
+                    {
+                        Console.WriteLine("L'age est :"+ age);
+                        age = Message.AskForNewAge();
+                        break;
+                    }
             }
         }
     }
