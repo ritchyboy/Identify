@@ -29,5 +29,14 @@ namespace Identify
             Console.WriteLine("Age: " + age);
             Console.WriteLine("--------------------------");
         }
+        public void Modify()
+        {
+            int mod = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Que voulez-vous modifier sur cette personne");
+            if (mod==1)
+            {
+               
+            }
+        }
     }
 }
