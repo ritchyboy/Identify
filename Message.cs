@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Identify
 {
@@ -21,6 +22,7 @@ namespace Identify
             Console.WriteLine("2.Changer le nom de famille de la personne");
             Console.WriteLine("3.Changer l'age de la personne");
         }
+
         static bool CheckIfDigit(string nom)
         {
             foreach (char n in nom)

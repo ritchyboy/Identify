@@ -25,26 +25,20 @@ namespace Identify
                         }
                     case 2:
                         {
-                            foreach (var pers in ListePersonne)
-                            {
-                                pers.Afficher();
-                            }
+                            Personne.AfficherListeDePersonne(ListePersonne);
                             foreach(var pers in ListePersonne)
                             {
                                 int modifyIndex = Message.AskForIndexMod();
                                 if (modifyIndex==pers.id)
                                 {
-                                    pers.Modify(); ;
+                                    pers.Modify();
                                 }
                             }
                             break;
                         }
                     case 3:
                         {
-                            foreach (var pers in ListePersonne)
-                            {
-                                pers.Afficher();
-                            }
+                            Personne.AfficherListeDePersonne(ListePersonne);
                             int index = Message.AskForIndex();
                             ListePersonne.RemoveAt(index);
                             Message.ConfirmationDelete();
@@ -52,10 +46,7 @@ namespace Identify
                         }
                     case 4:
                         {
-                            foreach (var pers in ListePersonne)
-                            {
-                                pers.Afficher();
-                            }
+                            Personne.AfficherListeDePersonne(ListePersonne);
                             break;
                         }
                     case 0:

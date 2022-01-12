@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Identify
 {
@@ -24,6 +25,13 @@ namespace Identify
             Console.WriteLine("Nom de famille: " + lastName);
             Console.WriteLine("Age: " + age);
             Console.WriteLine("--------------------------");
+        }
+        public static void AfficherListeDePersonne(List<Personne> personne)
+        {
+            foreach (var perso in personne)
+            {
+                perso.Afficher();
+            }
         }
         public void Modify()
         {
